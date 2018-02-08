@@ -1,8 +1,8 @@
 # https://www.hackerrank.com/challenges/ctci-making-anagrams/problem
 def number_needed(a, b):
     count = 0
-    # ASCII code 97 = a, code 123 = z
-    for ascii_code in range(97, 123):
+    # ASCII code 97 = a, code 123 = z (added one greater than 123 because range is not inclusive
+    for ascii_code in range(97, 124):
         letter = chr(ascii_code)
         count += abs(a.count(letter) - b.count(letter))
     return count
